@@ -1,0 +1,62 @@
+.footer-container {
+  padding: 6rem 3rem 8rem;
+  border-top: 1px solid rgba(234, 222, 207, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  font-weight: 300;
+  line-height: 2;
+  .col1 {
+    .logo {
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+    .address {
+      width: 80%;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      span {
+        text-decoration: underline;
+      }
+    }
+    .socials {
+      i {
+        padding-right: 1rem;
+      }
+    }
+  }
+  h4 {
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  .col2 {
+    a {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+  }
+  .col3 {
+    input {
+      padding: 1rem;
+      background-color: #faeedd;
+      outline: none;
+      border: 1px #000 solid;
+      font-style: italic;
+    }
+    input[type="email"] {
+      width: 80%;
+      border-right: none;
+    }
+    input[type="button"] {
+      width: 20%;
+      cursor: pointer;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
