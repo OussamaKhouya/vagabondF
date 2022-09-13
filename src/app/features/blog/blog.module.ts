@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogComponent } from './blog.component';
+import { SpinnerComponent } from 'src/app/shared/spinner/spinner.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,6 @@ import { BlogComponent } from './blog.component';
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, BlogRoutingModule],
+  imports: [CommonModule, BlogRoutingModule, SharedModule],
 })
 export class BlogModule {}

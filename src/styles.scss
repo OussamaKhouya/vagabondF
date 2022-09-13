@@ -48,6 +48,7 @@ $bg-color: #faeedd;
 body {
   background: $bg-color;
   font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {

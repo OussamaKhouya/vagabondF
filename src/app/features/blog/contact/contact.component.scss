@@ -1,0 +1,85 @@
+.map {
+  padding: 3rem;
+}
+
+.contact {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem;
+  .contact-form {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    input,
+    textarea {
+      padding: 14px 11px;
+      margin-bottom: 12px;
+      background-color: #faeedd;
+      border: 1px rgba(125, 119, 110, 1) solid;
+      outline: none;
+      line-height: 15px;
+      font-style: italic;
+      font-weight: 300;
+    }
+    textarea {
+      height: 150px;
+    }
+    textarea,
+    input[type="email"] {
+      grid-column: span 2;
+    }
+    input[type="submit"] {
+      width: fit-content;
+      padding: 10px 40px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+  }
+  .contact-details {
+    flex: 1;
+    .secondary-title {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .primary-title {
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    .text {
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .items {
+      display: flex;
+      gap: 10px;
+      .item {
+        position: relative;
+        padding-left: 2rem;
+        h3 {
+          i {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            font-size: 1rem;
+          }
+          margin-bottom: 10px;
+          font-size: 19px;
+          line-height: 26px;
+          font-style: normal;
+          font-weight: 400;
+        }
+        p {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
