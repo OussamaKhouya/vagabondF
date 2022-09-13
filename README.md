@@ -14,8 +14,8 @@ This repository is the frontend of the project. To check the backend part visite
 - Author can also give blog posts different tags and classify them into various categories.
 - The visitors can view and comment blog posts,search by keyword and categories.
 
-### ED Diagram
+### Entity Relationship Diagram
 
 <div align=center>
-<img src="./src/blog_ER_Diagram.drawio.svg" width="90%"/>
+<img src="https://github.com/OussamaKhouya/my-personal-blog-springboot/blob/main/src/blog_ER_Diagram.drawio.svg" width="90%"/>
 </div>
