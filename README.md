@@ -1,6 +1,6 @@
 # Vagabond : Personal Blog - Angular and Spring Boot
 
-This repository is the frontend of the project. To check the backend part visite [VagabondB](https://github.com/OussamaKhouya/)
+This repository is the frontend of the project. To check the backend part visite [VagabondB](https://github.com/OussamaKhouya/my-personal-blog-springboot)
 
 ## Live Preview : [Open Link](https://vagabondf.vercel.app/)
 
