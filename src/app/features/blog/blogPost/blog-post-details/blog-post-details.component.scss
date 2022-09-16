@@ -1,0 +1,176 @@
+:host {
+  padding: 2rem 3rem;
+  display: flex;
+  gap: 2.5rem;
+  article {
+    flex: 6;
+    .img-container {
+      margin-bottom: 1.5rem;
+    }
+    .primary-title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .details {
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-bottom: 5rem;
+      p {
+        padding-bottom: 1rem;
+      }
+    }
+    .comments-section {
+      .comments-all {
+        margin: 4rem 0;
+        .secondary-title {
+          font-size: 0.8rem;
+          letter-spacing: 2px;
+          font-weight: 300;
+          margin-bottom: 1rem;
+        }
+        .comment {
+          margin: 2rem 0;
+          display: flex;
+          align-content: flex-start;
+          gap: 1rem;
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+          }
+          .comment-info {
+            .user-name {
+              font-size: 1rem;
+              text-transform: uppercase;
+              font-weight: 400;
+              margin-bottom: 0.5rem;
+            }
+            .comment-details {
+              font-weight: 300;
+              letter-spacing: 1px;
+              font-size: 0.7rem;
+              margin-bottom: 0.8rem;
+            }
+            .comment-content {
+              font-weight: 300;
+              font-size: 0.9rem;
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+      .comments-form {
+        .contact-form {
+          flex: 1;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 10px;
+          input,
+          textarea {
+            padding: 14px 11px;
+            margin-bottom: 12px;
+            background-color: #faeedd;
+            border: 1px rgba(125, 119, 110, 1) solid;
+            outline: none;
+            line-height: 15px;
+            font-style: italic;
+            font-weight: 300;
+          }
+          textarea {
+            height: 150px;
+            grid-column: span 3;
+          }
+          .checkbox-group {
+            margin: 10px 0;
+            grid-column: span 3;
+            font-weight: 300;
+            font-size: 0.9rem;
+          }
+
+          input[type="submit"] {
+            grid-column: span 3;
+            width: fit-content;
+            padding: 15px 40px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            justify-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+  aside {
+    flex: 2;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.4;
+    .title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .author {
+      .author-img {
+        margin-bottom: 1rem;
+      }
+      .author-name {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+
+      .author-about {
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+    }
+    .last-posts {
+      .items {
+        .item {
+          margin: 15px 0;
+          display: flex;
+          align-content: flex-start;
+          gap: 1rem;
+          img {
+            width: 90px;
+            height: 90px;
+          }
+          .item-info {
+            h3 {
+              font-size: 0.9rem;
+              text-transform: uppercase;
+              font-weight: 400;
+              margin-bottom: 0.5rem;
+            }
+            h5 {
+              font-weight: 300;
+              letter-spacing: 2px;
+              font-size: 0.7rem;
+              margin-bottom: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

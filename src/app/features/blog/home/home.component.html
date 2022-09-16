@@ -6,7 +6,11 @@
       </div>
       <div class="showcase-details">
         <p class="showcase-date">6 NOVEMBER</p>
-        <h1 class="showcase-title">{{ blogPosts[5].title }}</h1>
+        <h1 class="showcase-title">
+          <a routerLink="/posts/{{ blogPosts[5].id }}">
+            {{ blogPosts[5].title }}
+          </a>
+        </h1>
         <p class="showcase-text" [innerHTML]="blogPosts[5].preview"></p>
         <p class="showcase-author">BY <span>IVES KLEIN</span></p>
       </div>
@@ -20,7 +24,11 @@
           <div class="post-img">
             <img [src]="blogPosts[i].imageUrl" />
           </div>
-          <h3 class="post-title">{{ blogPosts[i].title }}</h3>
+          <h3 class="post-title">
+            <a routerLink="/posts/{{ blogPosts[i].id }}">
+              {{ blogPosts[i].title }}
+            </a>
+          </h3>
           <p class="post-author">BY <span>LE MAGAZINE</span></p>
         </div>
       </div>
