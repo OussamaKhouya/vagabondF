@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog.component';
 import { BlogPostDetailsComponent } from './blogPost/blog-post-details/blog-post-details.component';
+import { BlogPostListComponent } from './blogPost/blog-post-list/blog-post-list.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
         path: 'posts/:id',
         component: BlogPostDetailsComponent,
       },
+      { path: 'search/:keyword', component: BlogPostListComponent },
       {
         path: 'about',
         loadChildren: () =>

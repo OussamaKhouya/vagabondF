@@ -3,7 +3,12 @@
     <div class="input-group">
       <i class="fa-solid fa-magnifying-glass"></i>
 
-      <input type="text" placeholder="Search" />
+      <input
+        #myInput
+        (keyup.enter)="doSearch(myInput.value)"
+        type="text"
+        placeholder="Search"
+      />
     </div>
     <div class="close-search">
       <a (click)="toggleSearchBox()"><i class="fa-solid fa-xmark"></i></a>

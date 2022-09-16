@@ -24,6 +24,11 @@ export class BlogPostService {
 
   private baseUrl = `${this.blogEndpoint}/blogPosts`;
 
+  getBlogPost(theBlogPostId: number): Observable<BlogPost> {
+    const blogPostUrl = `${this.baseUrl}/${theBlogPostId}`;
+    return this.httpClient.get<BlogPost>(blogPostUrl);
+  }
+
   constructor(private httpClient: HttpClient) {}
 
   getblogPostListPaginate(

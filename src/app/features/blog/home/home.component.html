@@ -2,7 +2,9 @@
   <ng-container *ngIf="blogPosts.length !== 0; else spinner">
     <div class="showcase">
       <div class="showcase-img">
-        <img [src]="blogPosts[5].imageUrl" />
+        <a routerLink="/posts/{{ blogPosts[5].id }}">
+          <img [src]="blogPosts[5].imageUrl" />
+        </a>
       </div>
       <div class="showcase-details">
         <p class="showcase-date">6 NOVEMBER</p>
@@ -22,7 +24,9 @@
       <div class="posts">
         <div class="post" *ngFor="let i of [0, 1]">
           <div class="post-img">
-            <img [src]="blogPosts[i].imageUrl" />
+            <a routerLink="/posts/{{ blogPosts[i].id }}">
+              <img [src]="blogPosts[i].imageUrl" />
+            </a>
           </div>
           <h3 class="post-title">
             <a routerLink="/posts/{{ blogPosts[i].id }}">
@@ -42,9 +46,15 @@
         <ng-container *ngFor="let post of blogPosts">
           <div class="post">
             <div class="post-img">
-              <img [src]="post.imageUrl" />
+              <a routerLink="/posts/{{ post.id }}">
+                <img [src]="post.imageUrl" />
+              </a>
             </div>
-            <h3 class="post-title">{{ post.title }}</h3>
+            <h3 class="post-title">
+              <a routerLink="/posts/{{ post.id }}">
+                {{ post.title }}
+              </a>
+            </h3>
             <p class="post-preview" [innerHTML]="post.preview"></p>
             <p class="post-date">01 OCTOBER, 2019</p>
           </div>
