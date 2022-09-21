@@ -62,7 +62,6 @@ export class HomeComponent implements OnInit {
 }
 
 // showMore() {
-//   console.log(this.thePageSize, this.theTotalElements);
 //   if (this.thePageSize + 3 >= this.theTotalElements) {
 //     this.thePageSize = this.theTotalElements;
 //   } else {
