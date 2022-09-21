@@ -1,6 +1,37 @@
-<article>
-  <p>Search results Here!</p>
-</article>
+<main>
+  <ng-container *ngIf="blogPosts.length !== 0; else spinner">
+    <article *ngFor="let tempBlogPost of blogPosts">
+      <div class="img-container">
+        <a routerLink="/posts/{{ tempBlogPost.id }}">
+          <img [src]="tempBlogPost.imageUrl" alt="" />
+        </a>
+      </div>
+      <h3 class="primary-title">
+        <a routerLink="/posts/{{ tempBlogPost.id }}">
+          {{ tempBlogPost.title }}
+        </a>
+      </h3>
+      <p class="details">
+        POSTED AT 10:36H IN JOURNAL BY JANE 1 COMMENT 0LIKES
+      </p>
+      <div class="preview" [innerHTML]="tempBlogPost.preview"></div>
+      <div class="more">
+        <a routerLink="/posts/{{ tempBlogPost.id }}">READ MORE</a>
+      </div>
+    </article>
+    <!-- <div class="more-results" *ngIf="showMoreButton">
+      <a (click)="showMore()">MORE RESULTS</a>
+    </div> -->
+  </ng-container>
+
+  <ng-template #spinner>
+    <!-- If blogPosts empty then display a message -->
+    <div *ngIf="!showSpinner" class="alert">No Blog Posts found.</div>
+    <div class="spinner" *ngIf="showSpinner">
+      <app-spinner color="#000"></app-spinner>
+    </div>
+  </ng-template>
+</main>
 
 <!-- Sidebar -->
 

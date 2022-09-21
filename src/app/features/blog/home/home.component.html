@@ -2,18 +2,18 @@
   <ng-container *ngIf="blogPosts.length !== 0; else spinner">
     <div class="showcase">
       <div class="showcase-img">
-        <a routerLink="/posts/{{ blogPosts[5].id }}">
-          <img [src]="blogPosts[5].imageUrl" />
+        <a routerLink="/posts/{{ blogPosts[0].id }}">
+          <img [src]="blogPosts[0].imageUrl" />
         </a>
       </div>
       <div class="showcase-details">
         <p class="showcase-date">6 NOVEMBER</p>
         <h1 class="showcase-title">
-          <a routerLink="/posts/{{ blogPosts[5].id }}">
-            {{ blogPosts[5].title }}
+          <a routerLink="/posts/{{ blogPosts[0].id }}">
+            {{ blogPosts[0].title }}
           </a>
         </h1>
-        <p class="showcase-text" [innerHTML]="blogPosts[5].preview"></p>
+        <p class="showcase-text" [innerHTML]="blogPosts[0].preview"></p>
         <p class="showcase-author">BY <span>IVES KLEIN</span></p>
       </div>
     </div>
@@ -22,7 +22,7 @@
     <div class="featured">
       <h3 class="featured-title">FEATURED POSTS</h3>
       <div class="posts">
-        <div class="post" *ngFor="let i of [0, 1]">
+        <div class="post" *ngFor="let i of [1, 2]">
           <div class="post-img">
             <a routerLink="/posts/{{ blogPosts[i].id }}">
               <img [src]="blogPosts[i].imageUrl" />
@@ -43,7 +43,7 @@
       <h3 class="title">LEW’S INTEREST STRETCH FURTHER</h3>
 
       <div class="posts">
-        <ng-container *ngFor="let post of blogPosts">
+        <ng-container *ngFor="let post of blogPosts | slice: 3">
           <div class="post">
             <div class="post-img">
               <a routerLink="/posts/{{ post.id }}">

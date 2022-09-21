@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { BlogPost } from 'src/app/core/models/blog-post';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 interface GetResponseBlogPosts {
   _embedded: {
@@ -36,8 +37,25 @@ export class BlogPostService {
     thePageSize: number
   ): Observable<GetResponseBlogPosts> {
     const url = `${this.baseUrl}?page=${thePage}&size=${thePageSize}`;
-    console.log(url);
 
     return this.httpClient.get<GetResponseBlogPosts>(url);
+  }
+
+  searchBlogPostsPaginate(
+    thePage: number,
+    thePageSize: number,
+    theKeyword: string
+  ): Observable<GetResponseBlogPosts> {
+    const searchUrl =
+      `${this.baseUrl}/search/findByTitleContaining?title=${theKeyword}` +
+      `&page=${thePage}&size=${thePageSize}`;
+    return this.httpClient.get<GetResponseBlogPosts>(searchUrl);
+  }
+
+  searchBlogPosts(theKeyword: string): Observable<BlogPost[]> {
+    const searchUrl = `${this.baseUrl}/search/findByTitleContaining?title=${theKeyword}`;
+    return this.httpClient
+      .get<GetResponseBlogPosts>(searchUrl)
+      .pipe(map((response) => response._embedded.blogPosts));
   }
 }

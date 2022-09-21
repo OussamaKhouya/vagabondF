@@ -2,7 +2,6 @@
   <div id="search" *ngIf="showSearchBox">
     <div class="input-group">
       <i class="fa-solid fa-magnifying-glass"></i>
-
       <input
         #myInput
         (keyup.enter)="doSearch(myInput.value)"
@@ -15,18 +14,18 @@
     </div>
   </div>
   <nav>
-    <h1 class="logo"><a>Vagabond.</a></h1>
+    <h1 class="logo"><a routerLink="">Vagabond.</a></h1>
     <div class="latest">
-      <a href="#"> Check out our latest news</a>
+      <a routerLink=""> Check out our latest news</a>
     </div>
     <ul class="main-menu">
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="/about">About</a></li>
       <li><a routerLink="/contact">Contact</a></li>
-      <li><a routerLink="/single">Single</a></li>
+      <li><a routerLink="">Login</a></li>
     </ul>
     <div class="side-menu">
-      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <a routerLink="/contact"><i class="fa-solid fa-envelope"></i></a>
       <a (click)="toggleSearchBox()"
         ><i class="fa-solid fa-magnifying-glass"></i
       ></a>
